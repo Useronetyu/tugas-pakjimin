@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cappuccino Cloud Design System - Coffee Palette */
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap'); */
+
+@layer base {
+  :root {
+    /* Coffee Brown Base */
+    --background: 30 25% 97%;
+    --foreground: 20 30% 15%;
+
+    /* Card surfaces with warm undertones */
+    --card: 30 30% 99%;
+    --card-foreground: 20 30% 15%;
+
+    --popover: 30 30% 99%;
+    --popover-foreground: 20 30% 15%;
+
+    /* Primary: Rich Coffee Brown */
+    --primary: 20 35% 28%;
+    --primary-foreground: 35 35% 95%;
+
+    /* Secondary: Warm Cream */
+    --secondary: 45 40% 92%;
+    --secondary-foreground: 20 35% 28%;
+
+    /* Muted: Soft Beige */
+    --muted: 35 25% 93%;
+    --muted-foreground: 20 15% 45%;
+
+    /* Accent: Caramel Gold */
+    --accent: 35 75% 55%;
+    --accent-foreground: 20 35% 15%;
+
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 20 35% 28%;
+
+    --radius: 0.75rem;
+
+    /* Custom Coffee Colors */
+    --espresso: 20 40% 18%;
+    --latte: 35 35% 85%;
+    --mocha: 15 45% 35%;
+    --cream: 45 50% 96%;
+    --caramel: 35 85% 50%;
+    --foam: 40 30% 97%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(20 40% 18%), hsl(15 45% 35%));
+    --gradient-card: linear-gradient(180deg, hsl(30 30% 99%), hsl(35 25% 95%));
+    --gradient-accent: linear-gradient(135deg, hsl(35 85% 50%), hsl(25 75% 45%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(20 30% 20% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(20 30% 20% / 0.12);
+    --shadow-elevated: 0 20px 50px -10px hsl(20 30% 20% / 0.2);
+
+    /* Sidebar */
+    --sidebar-background: 20 40% 18%;
+    --sidebar-foreground: 35 35% 90%;
+    --sidebar-primary: 35 75% 55%;
+    --sidebar-primary-foreground: 20 35% 15%;
+    --sidebar-accent: 20 35% 25%;
+    --sidebar-accent-foreground: 35 35% 90%;
+    --sidebar-border: 20 30% 25%;
+    --sidebar-ring: 35 75% 55%;
+  }
+
+  .dark {
+    --background: 20 30% 8%;
+    --foreground: 35 25% 92%;
+
+    --card: 20 25% 12%;
+    --card-foreground: 35 25% 92%;
+
+    --popover: 20 25% 12%;
+    --popover-foreground: 35 25% 92%;
+
+    --primary: 35 75% 55%;
+    --primary-foreground: 20 35% 10%;
+
+    --secondary: 20 20% 18%;
+    --secondary-foreground: 35 25% 92%;
+
+    --muted: 20 20% 18%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 35 75% 55%;
+    --accent-foreground: 20 35% 10%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 20% 20%;
+    --input: 20 20% 20%;
+    --ring: 35 75% 55%;
+
+    --sidebar-background: 20 30% 6%;
+    --sidebar-foreground: 35 25% 90%;
+    --sidebar-primary: 35 75% 55%;
+    --sidebar-primary-foreground: 20 35% 10%;
+    --sidebar-accent: 20 25% 15%;
+    --sidebar-accent-foreground: 35 25% 90%;
+    --sidebar-border: 20 25% 15%;
+    --sidebar-ring: 35 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .text-espresso {
+    color: hsl(var(--espresso));
+  }
+
+  .bg-espresso {
+    background-color: hsl(var(--espresso));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  .bg-latte {
+    background-color: hsl(var(--latte));
+  }
+
+  .bg-foam {
+    background-color: hsl(var(--foam));
+  }
+
+  .text-caramel {
+    color: hsl(var(--caramel));
+  }
+
+  .bg-caramel {
+    background-color: hsl(var(--caramel));
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes steam {
+  0%, 100% { opacity: 0.4; transform: translateY(0) scale(1); }
+  50% { opacity: 0.8; transform: translateY(-20px) scale(1.2); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-steam {
+  animation: steam 2s ease-in-out infinite;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
